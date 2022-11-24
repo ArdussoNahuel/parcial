@@ -5,13 +5,17 @@ public class Pasajero {
 	private String nombre;
 	private int edad;
 	private double saldo;
+	private int parada;
+	private boolean estado;
 	
-	public Pasajero(int id, String nombre, int edad, double saldo) {
+	public Pasajero(int id, String nombre, int edad, double saldo, int parada, boolean estado) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.saldo = saldo;
+		this.parada = parada;
+		this.estado= estado;
 	}
 
 	public int getId() {
@@ -46,10 +50,29 @@ public class Pasajero {
 		this.saldo = saldo;
 	}
 
+	public int getParada() {
+		return parada;
+	}
+
+	public void setParada(int parada) {
+		this.parada = parada;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
+
 	@Override
 	public String toString() {
-		return "Pasajero [id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", saldo=" + saldo + "]\n";
+		return "Pasajero nro " + id + ", " + nombre + " de " + edad + " con $" + saldo + "se baja en la parada "
+				+ parada + "\n";
 	}
+
+	
 	
 	
 }

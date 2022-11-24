@@ -6,13 +6,15 @@ public class Colectivo {
 	private int id;
 	private boolean estado;
 	private LinkedList<Pasajero> pasajeros;
+	private int lleno;
 	private double recaudacion;
 	
-	public Colectivo(int id, boolean estado, LinkedList<Pasajero> pasajeros, double recaudacion) {
+	public Colectivo(int id, boolean estado, LinkedList<Pasajero> pasajeros, int lleno, double recaudacion) {
 		super();
 		this.id = id;
 		this.estado = estado;
 		this.pasajeros = pasajeros;
+		this.lleno = lleno;
 		this.recaudacion = recaudacion;
 	}
 
@@ -38,6 +40,14 @@ public class Colectivo {
 
 	public void setPasajeros(LinkedList<Pasajero> pasajeros) {
 		this.pasajeros = pasajeros;
+	}
+
+	public int getLleno() {
+		return lleno;
+	}
+
+	public void setLleno(int lleno) {
+		this.lleno = lleno;
 	}
 
 	public double getRecaudacion() {
